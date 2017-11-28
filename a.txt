@@ -3,3 +3,6 @@
     nihaode 大家好
 ```
 大家好
+[gui]     encoding = utf-8
+[i18n]     commitencoding = gbk 
+[svn]     pathnameencoding = gbk
