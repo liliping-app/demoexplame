@@ -1,4 +1,4 @@
-谈谈VUE钟 methods、watch、computed的区别
+﻿谈谈VUE钟 methods、watch、computed的区别
 1.methods、watch、computed都是以函数为基础的，单各自却有所不同。
 对比：
 1.methods和（watch/computed）的对比
@@ -43,3 +43,4 @@ watch擅长处理的场景：一个数据影响多个数据
 有一天，船长路飞为了加强团队建设，弘扬海贼文化，决定“草帽海贼团”改名为“橡胶海贼团”（路飞是橡胶恶魔果实能力者）
 computed擅长处理的场景：一个数据受多个数据影响
 methods不处理数据逻辑关系，只提供可调用的函数
+
