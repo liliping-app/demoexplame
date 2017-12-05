@@ -1,0 +1,21 @@
+响应式概述
+1.设置viewport
+移动端一般会有布局视口（layout viewport），可视视口（visual viewport），理想视口（idea viewport），一般手机为了能够显示网页， 会将布局视口设置为980px以上，可视视口就是浏览器的窗口大小，理想视口嫩，就是不需要缩放就能查看网页的宽度，一般移动端都是采用理想视口，为了实现理想视口，我们会在head当中写这样一段代码：
+<meta name="viewport" content="width=device-width,initial-scale=1">
+2.单位的选择
+1 px
+2 em
+3 rem
+em和rem，em是相对单位，参照物是设置了font-size的父元素的font-size。如果父元素为12px，子元素的font-size为2em，那么子元素的font-size就为24px。当父元素没有设置font-size是，子元素就会一直向上查找设置了font-size的祖先元素，一直到html，如果都没有设置，那么浏览器默认1em= 16px。
+rem可以理解为root-em，rem的参照物为根元素html，如果给html设置了font-size为10px，那么1rem即为10px。当html没有设置font-size时，浏览器默认1rem = 16px。
+在移动端，我们最好采用rem单位来设置font-size和margin，padding，这样我们以后只需要采用@media查询来更改html的font-size就能适配不同的页面。
+3.盒子宽高的设置
+一般块状元素宽度都设置为百分比，这样不同分辨率大小网页内容可以自适应。
+4.图片自适应
+<picture>
+    <source srcset="imgs/ad001-1.png" media ="(min-width: 50em)">
+    <source srcset="imgs/ad001-1.png" media ="(min-width: 50em)">
+    <img src="imgs/ad001.png" alt="2016">
+</picture>
+因为浏览器支持性较差，这里采用picturefill.js插件来模拟picture标签，picture标签的意义是遍历source，然后采用符合media查询的img
+
